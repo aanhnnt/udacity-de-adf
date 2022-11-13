@@ -1,0 +1,9 @@
+{
+	"name": "anhnntdatafactory",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "82024a3f-1ed2-46c8-bee4-a6876d9f1508",
+		"tenantId": "9b7cbd77-6d6b-4879-8aba-63d7dfb18472"
+	}
+}
