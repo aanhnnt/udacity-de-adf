@@ -3,37 +3,6 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow load 2021 payload to sqldb",
-				"type": "ExecuteDataFlow",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"dataflow": {
-						"referenceName": "df_load_2021_payroll_data_to_sql_database",
-						"type": "DataFlowReference"
-					},
-					"staging": {
-						"linkedService": {
-							"referenceName": "anhnntstorageaccount",
-							"type": "LinkedServiceReference"
-						},
-						"folderPath": "adlsnycpayroll-yourfirstname-lastintial/dirstaging"
-					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
-					},
-					"traceLevel": "Fine"
-				}
-			},
-			{
 				"name": "Data flow load 2021 payload to synapse",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [
@@ -53,6 +22,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"dataflow": {
+						"referenceName": "df_load_2021_payload_data_to_synapse",
+						"type": "DataFlowReference"
+					},
 					"staging": {
 						"linkedService": {
 							"referenceName": "anhnntstorageaccount",
@@ -174,6 +147,26 @@
 						},
 						"folderPath": "adlsnycpayroll-yourfirstname-lastintial/dirstaging"
 					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "Data flow load 2021 payload to sqldb",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
