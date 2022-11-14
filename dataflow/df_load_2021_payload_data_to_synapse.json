@@ -64,12 +64,7 @@
 				"     allowCopyCommand: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError',",
-				"     mapColumn(",
-				"          EmployeeID,",
-				"          LastName,",
-				"          FirstName",
-				"     )) ~> sinkNYCPayrollData"
+				"     errorHandlingOption: 'stopOnFirstError') ~> sinkNYCPayrollData"
 			]
 		}
 	}
