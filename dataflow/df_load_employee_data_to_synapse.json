@@ -1,5 +1,5 @@
 {
-	"name": "df_load_employee_to_synapse",
+	"name": "df_load_employee_data_to_synapse",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
