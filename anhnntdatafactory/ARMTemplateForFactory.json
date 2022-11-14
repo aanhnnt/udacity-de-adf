@@ -84,7 +84,7 @@
 				"parameters": {
 					"FiscalYear": {
 						"type": "int",
-						"defaultValue": 2021
+						"defaultValue": 2020
 					}
 				},
 				"annotations": []
@@ -1016,7 +1016,7 @@
 					],
 					"scriptLines": [
 						"parameters{",
-						"     FiscalYear as integer (2021)",
+						"     FiscalYear as integer (2020)",
 						"}",
 						"source(output(",
 						"          FiscalYear as integer,",
@@ -1084,6 +1084,7 @@
 						"     insertable:true,",
 						"     updateable:false,",
 						"     upsertable:false,",
+						"     truncate:true,",
 						"     format: 'table',",
 						"     staged: true,",
 						"     allowCopyCommand: true,",
