@@ -91,6 +91,13 @@
 						"referenceName": "df_load_employee_data_to_synapse",
 						"type": "DataFlowReference"
 					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "anhnntstorageaccount",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayroll-yourfirstname-lastintial/dirstaging"
+					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
@@ -159,6 +166,13 @@
 					"dataflow": {
 						"referenceName": "df_load_agency_data_to_synapse",
 						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "anhnntstorageaccount",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayroll-yourfirstname-lastintial/dirstaging"
 					},
 					"compute": {
 						"coreCount": 8,
