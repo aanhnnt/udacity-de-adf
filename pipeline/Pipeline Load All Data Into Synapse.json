@@ -1,5 +1,5 @@
 {
-	"name": "Pipeline Load 2021 Payroll data into SQLDB",
+	"name": "Pipeline Load All Data Into Synapse",
 	"properties": {
 		"activities": [
 			{
